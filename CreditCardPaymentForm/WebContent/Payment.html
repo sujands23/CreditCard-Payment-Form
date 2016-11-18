@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Credit Card Payment</title>
+<link rel="stylesheet" href="./Payment.css" type="text/css">
+<link rel="stylesheet" href="./PaymentFont-master/PaymentFont-master/css/paymentfont.min.css" type="text/css">
+</head>
+<body>
+<h1>Payment</h1>
+	<div id="container">
+		<div id="cardFront">
+			<div id="cardNameDiv">
+				Credit card
+			</div>
+			<div id="chipDiv">
+				<div id="cardReader">------------------</div>
+			</div>
+			<div id="userFieldsDiv">
+				<div id="cardNumberDiv" class="cardDiv">
+					<input type="text" placeholder="Card Number" maxlength="20" onKeyUp="paymentLogo()" class="cardEntryField" id="cardNumber" autofocus></input>
+				</div>
+				<div id="expirationDate" class="cardDiv">
+					<small style="color: black; font-family: monospace; ">Expiry Date</small> 
+					<select name="cardExpiryMonth" class="cardEntryField" id="cardExpiryMonth">
+						<option value="0">Month</option>
+						<option value="01">01-Jan</option>
+						<option value="02">02-Feb</option>
+						<option value="03">03-Mar</option>
+						<option value="04">04-Apr</option>
+						<option value="05">05-May</option>
+						<option value="06">06-Jun</option>
+						<option value="07">07-Jul</option>
+						<option value="08">08-Aug</option>
+						<option value="09">09-Sep</option>
+						<option value="10">10-Oct</option>
+						<option value="11">11-Nov</option>
+						<option value="12">12-Dec</option>
+					</select>
+					<input type="text" name="cardExpiryYear" id="cardExpiryYear" placeholder="Year" maxlength="4" class="cardEntryField" min="2016"></input>
+				</div>
+				<div id="cardHoldersNameDiv" class="cardDiv">
+					<input type="text" name="cardHoldersName" id="cardHoldersName"placeholder="Name on card" class="cardEntryField"></input>
+				</div>
+				<div id="paymentSystems">
+				</div>
+			</div>
+		</div>
+		
+		<div id="cardBack">
+			<div id="magneticStrip"></div>
+			<div id="signCVV">
+				<div id="signatureStrip">
+					PayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPayPay
+				</div>
+				<div id="cvvDiv">
+					<input type="password" name="cvv" id="cvv" placeholder="CVV" maxlength="4" class="cardEntryField"></input>
+				</div>
+			</div>
+		</div>
+		<div id="pay">
+			<button type="submit" id="payButton">PAY</button> 
+		</div>
+	</div>
+</body>
+<script src="./Payment.js"></script>
+</html>
